@@ -1,0 +1,66 @@
+/*configura a posição dos textos em td e th*/
+td, th {
+    text-align: center;
+    padding-left: 10px;
+    position: relative;
+    outline: 0;
+}
+/*configura a posição da tabela*/
+.myTable {
+    border: solid 3px #fff;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: normal 13px Arial, sans-serif;
+}
+/* Cabeçalho da planilha */
+.myTable thead th {
+    background-color: #ddd;
+    border: solid #ddd;
+    color: #000;
+    padding: 5px 25px 5px 25px;
+    text-align: center;
+}
+/*bordas da tabela*/
+.myTable tbody td {
+    border: solid 1px #000;
+    padding: 2px;
+    text-shadow: 2px 2px 2px #ddd;
+}
+/*Toda tabela fica junta se removido*/
+.myTable-highlight-all tbody td, .myTable-highlight-all thead th {
+    position: relative;
+}
+
+/*não deixa aumentar o tamanho da célula ao passar o mause*/
+.myTable-highlight-all tbody td:hover::before {
+    position: absolute;
+}
+
+/*corrige o hover das colunas*/
+.myTable-highlight-all tbody td:hover::after {
+    background-color: #ddd;
+    content:'\00a0';
+    height: 10000px;
+    left: 0;
+    position: absolute;
+    top: -5000px;
+    width: 100%;
+    z-index: -1;
+}
+
+/*assim a tabela nao mexe durante o hover*/
+table {
+    overflow: hidden;
+}
+
+table tr{
+    padding:10px;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+caption {
+    text-align: center;
+}
